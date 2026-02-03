@@ -1,7 +1,28 @@
 {
   "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
   "rewrites": [
-    { "source": "/ceremony", "destination": "/ceremony/index.html" },
-    { "source": "/ceremony/(.*)", "destination": "/ceremony/$1" }
+    {
+      "source": "/ceremony",
+      "destination": "/ceremony/index.html"
+    },
+    {
+      "source": "/ceremony/",
+      "destination": "/ceremony/index.html"
+    },
+    {
+      "source": "/ceremony/(.*)",
+      "destination": "/ceremony/$1"
+    }
   ]
 }
