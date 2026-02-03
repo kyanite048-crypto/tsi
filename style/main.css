@@ -1,0 +1,989 @@
+/* ==========================================
+   MOBILE-FIRST BIRTHDAY WEBSITE CSS
+   Base styles for small screens first
+   ========================================== */
+
+/* Base Reset */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Audio Player */
+.song {
+  visibility: hidden;
+}
+
+/* Main Container - Mobile First */
+.container {
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height for mobile */
+  margin: 0 auto;
+  overflow: hidden;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================
+   PAGE 1: NAME + GREETING (Mobile First)
+   ========================================== */
+.one {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.one span {
+  display: inline-block;
+}
+
+.two {
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-top: 10px;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+/* ==========================================
+   PAGE 2: DATE + AGE (Mobile First)
+   ========================================== */
+.three {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.birthday-info {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 15px;
+}
+
+.age-container {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+.age-container span {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0 3px;
+}
+
+/* ==========================================
+   PAGE 3: MESSAGE BOX (Mobile First)
+   ========================================== */
+.four {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  color: #333;
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.four .text-box {
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 15px 10px;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profile-initial {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.text-box .fake-btn {
+  background-color: rgb(21, 161, 237);
+  border-radius: 3px;
+  bottom: -40px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 5px;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   PAGE 4: SPECIAL MOMENTS (Mobile First)
+   ========================================== */
+.five {
+  position: relative;
+  width: 100%;
+}
+
+.five p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  padding: 0 15px;
+  position: relative;
+}
+
+.idea-3 strong {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 1.4rem;
+}
+
+.five .idea-5 {
+  font-size: 2rem;
+}
+
+.idea-5 span,
+.idea-6 span,
+.wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+/* ==========================================
+   PAGE 5: BIRTHDAY WISHES (Mobile First)
+   ========================================== */
+.six {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.six img.profile-picture {
+  display: block;
+  height: auto;
+  max-width: 70%;
+  width: 200px;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.six .hat {
+  position: absolute;
+  width: 50px;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wish-hbd {
+  font-size: 1.8rem;
+  margin: 10px 0 5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.wish h5 {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  margin: 5px 0 0;
+  padding: 0 10px;
+}
+
+/* ==========================================
+   PAGE 6: BALLOONS (Mobile First)
+   ========================================== */
+.seven {
+  height: 100vh;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.baloons {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: auto;
+}
+
+.baloons img:nth-child(even) {
+  left: -5%;
+}
+
+.baloons img:nth-child(odd) {
+  right: -5%;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 20%;
+}
+
+/* ==========================================
+   PAGE 7: DECORATIVE ELEMENTS (Mobile First)
+   ========================================== */
+.eight {
+  height: 100vh;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.eight svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.eight svg:nth-child(1) {
+  fill: #bd6ecf;
+  left: 5%;
+  top: 7%;
+}
+
+.eight svg:nth-child(2) {
+  fill: #7dd175;
+  left: 30%;
+  top: 20%;
+}
+
+.eight svg:nth-child(3) {
+  fill: #349d8b;
+  left: 15%;
+  top: 35%;
+}
+
+.eight svg:nth-child(4) {
+  fill: #347a9d;
+  left: 50%;
+  top: 45%;
+}
+
+.eight svg:nth-child(5) {
+  fill: #c66053;
+  left: 5%;
+  top: 65%;
+}
+
+.eight svg:nth-child(6) {
+  fill: #bfaa40;
+  left: 70%;
+  top: 40%;
+}
+
+.eight svg:nth-child(7) {
+  fill: #e3bae8;
+  left: 80%;
+  top: 65%;
+}
+
+.eight svg:nth-child(8) {
+  fill: #8762cb;
+  left: 35%;
+  top: 85%;
+}
+
+.eight svg:nth-child(9) {
+  fill: #9a90da;
+  left: 85%;
+  top: 92%;
+}
+
+/* ==========================================
+   PAGE 8: FINAL - YES/NO QUESTION (Mobile First)
+   ========================================== */
+.nine {
+  position: relative;
+  width: 100%;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.final-page-content {
+  position: relative;
+  z-index: 10;
+  display: none;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.final-page-content .question-text {
+  font-size: 1.4rem;
+  color: #ff6b6b;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  animation: bounceIn 0.8s ease-out;
+  padding: 0 10px;
+}
+
+.yes-no-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.animated-btn {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+  min-height: 50px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.yes-btn {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  box-shadow: 0 5px 20px rgba(56, 239, 125, 0.4);
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.yes-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(56, 239, 125, 0.6);
+}
+
+.yes-btn:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+.no-btn {
+  background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+  color: white;
+  box-shadow: 0 5px 20px rgba(244, 92, 67, 0.4);
+  animation: fadeInUp 0.6s ease-out 0.7s both;
+}
+
+.no-btn:hover {
+  transform: translateY(-2px);
+}
+
+.no-btn.running-away {
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: auto;
+}
+
+/* ==========================================
+   CONFETTI STYLES
+   ========================================== */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+  animation: confettiFall 3s linear infinite;
+  opacity: 0.8;
+}
+
+.confetti:nth-child(1) { left: 10%; animation-delay: 0s; }
+.confetti:nth-child(2) { left: 20%; animation-delay: 0.3s; background: #feca57; }
+.confetti:nth-child(3) { left: 30%; animation-delay: 0.6s; }
+.confetti:nth-child(4) { left: 40%; animation-delay: 0.9s; background: #48dbfb; }
+.confetti:nth-child(5) { left: 50%; animation-delay: 1.2s; }
+.confetti:nth-child(6) { left: 60%; animation-delay: 0.4s; background: #ff9ff3; }
+.confetti:nth-child(7) { left: 70%; animation-delay: 0.8s; }
+.confetti:nth-child(8) { left: 80%; animation-delay: 1.1s; background: #54a0ff; }
+.confetti:nth-child(9) { left: 90%; animation-delay: 0.5s; }
+.confetti:nth-child(10) { left: 15%; animation-delay: 1.4s; background: #ff6b6b; }
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   TABLET BREAKPOINT (≥ 576px)
+   ========================================== */
+@media screen and (min-width: 576px) {
+  .container > div {
+    top: 45%;
+  }
+
+  .one {
+    font-size: 3.5rem;
+  }
+
+  .two {
+    font-size: 1.3rem;
+  }
+
+  .three {
+    font-size: 2rem;
+  }
+
+  .birthday-info {
+    font-size: 1.4rem;
+  }
+
+  .age-container {
+    font-size: 2rem;
+  }
+
+  .age-container span {
+    font-size: 2.2rem;
+  }
+
+  .four {
+    max-width: 500px;
+  }
+
+  .four .text-box {
+    max-width: 450px;
+    padding: 15px;
+  }
+
+  .profile-initial {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .profile-name {
+    font-size: 1.4rem;
+  }
+
+  .text-box p {
+    font-size: 1.1rem;
+  }
+
+  .five p {
+    font-size: 1.6rem;
+  }
+
+  .idea-5 {
+    font-size: 2.5rem;
+  }
+
+  .idea-6 span {
+    font-size: 7rem;
+  }
+
+  .six img.profile-picture {
+    width: 250px;
+  }
+
+  .six .hat {
+    width: 65px;
+    top: -35px;
+  }
+
+  .wish-hbd {
+    font-size: 2.5rem;
+  }
+
+  .wish h5 {
+    font-size: 1.4rem;
+  }
+
+  .baloons img {
+    width: 70px;
+  }
+
+  .final-page-content .question-text {
+    font-size: 1.8rem;
+  }
+
+  .yes-no-buttons {
+    gap: 25px;
+  }
+
+  .animated-btn {
+    padding: 18px 45px;
+    font-size: 1.3rem;
+  }
+
+  .confetti {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ==========================================
+   SMALL DESKTOP BREAKPOINT (≥ 768px)
+   ========================================== */
+@media screen and (min-width: 768px) {
+  .container > div {
+    top: 40%;
+  }
+
+  .one {
+    font-size: 4.5rem;
+  }
+
+  .two {
+    font-size: 1.5rem;
+  }
+
+  .three {
+    font-size: 2.5rem;
+  }
+
+  .birthday-info {
+    font-size: 1.6rem;
+  }
+
+  .age-container {
+    font-size: 2.2rem;
+  }
+
+  .age-container span {
+    font-size: 2.5rem;
+  }
+
+  .four .text-box {
+    max-width: 550px;
+    border: 3px solid #aaa;
+    padding: 20px;
+  }
+
+  .profile {
+    margin-bottom: 20px;
+  }
+
+  .profile-initial {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .text-box p {
+    font-size: 1.2rem;
+  }
+
+  .text-box .fake-btn {
+    bottom: -50px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .five p {
+    font-size: 1.8rem;
+  }
+
+  .idea-3 strong {
+    padding: 5px 10px;
+    font-size: 1.6rem;
+  }
+
+  .five .idea-5 {
+    font-size: 3rem;
+  }
+
+  .idea-6 span {
+    font-size: 9rem;
+  }
+
+  .six img.profile-picture {
+    width: 300px;
+  }
+
+  .six .hat {
+    width: 75px;
+    top: -40px;
+  }
+
+  .wish-hbd {
+    font-size: 3rem;
+  }
+
+  .wish h5 {
+    font-size: 1.6rem;
+  }
+
+  .baloons img {
+    width: 90px;
+  }
+
+  .baloons img:nth-child(even) {
+    left: -10%;
+  }
+
+  .baloons img:nth-child(odd) {
+    right: -10%;
+  }
+
+  .baloons img:nth-child(3n + 0) {
+    left: 30%;
+  }
+
+  .eight svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .final-page-content .question-text {
+    font-size: 2.2rem;
+  }
+
+  .animated-btn {
+    padding: 20px 50px;
+    font-size: 1.4rem;
+  }
+
+  .confetti {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* ==========================================
+   LARGE DESKTOP BREAKPOINT (≥ 992px)
+   ========================================== */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .one {
+    font-size: 5rem;
+  }
+
+  .idea-6 span {
+    font-size: 12rem;
+  }
+
+  .six img.profile-picture {
+    width: 350px;
+    height: auto;
+  }
+
+  .six .hat {
+    width: 85px;
+    top: -45px;
+    left: calc(50% - 20px);
+  }
+
+  .wish-hbd {
+    font-size: 3.5rem;
+  }
+
+  .wish h5 {
+    font-size: 1.8rem;
+  }
+
+  .baloons img {
+    width: 100px;
+  }
+
+  .final-page-content .question-text {
+    font-size: 2.5rem;
+  }
+
+  .animated-btn {
+    padding: 22px 55px;
+    font-size: 1.5rem;
+    min-width: 150px;
+  }
+
+  .yes-no-buttons {
+    gap: 30px;
+  }
+}
+
+/* ==========================================
+   VERY LARGE SCREENS (≥ 1200px)
+   ========================================== */
+@media screen and (min-width: 1200px) {
+  .six .hat {
+    left: calc(50% + 40px);
+  }
+
+  .eight svg:nth-child(6) {
+    left: 77%;
+  }
+
+  .eight svg:nth-child(7) {
+    left: 83%;
+  }
+
+  .eight svg:nth-child(9) {
+    left: 87%;
+  }
+}
+
+/* ==========================================
+   HEIGHT-SPECIFIC ADJUSTMENTS
+   ========================================== */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .container > div {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .one {
+    font-size: 2rem;
+  }
+
+  .two {
+    font-size: 1rem;
+  }
+
+  .three {
+    font-size: 1.5rem;
+  }
+
+  .age-container {
+    font-size: 1.5rem;
+  }
+
+  .four {
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
+  .four .text-box {
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  .six {
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
+  .six img.profile-picture {
+    width: 150px;
+    margin: 0 auto 10px;
+  }
+
+  .wish-hbd {
+    font-size: 1.5rem;
+  }
+
+  .wish h5 {
+    font-size: 1rem;
+  }
+
+  .nine {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .final-page-content .question-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .animated-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .yes-no-buttons {
+    margin: 20px 0;
+    gap: 15px;
+  }
+}
+
+/* ==========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ========================================== */
+@media (pointer: coarse) {
+  .animated-btn:active {
+    transform: scale(0.98);
+  }
+
+  .text-box .fake-btn:active {
+    background-color: rgb(20, 150, 230);
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-box {
+    border-color: #000;
+  }
+
+  .text-box .fake-btn {
+    background-color: #000;
+  }
+
+  .yes-btn,
+  .no-btn {
+    border: 2px solid #fff;
+  }
+}
+
+/* ==========================================
+   DARK MODE SUPPORT
+   ========================================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a2e;
+    color: #eee;
+  }
+
+  .four {
+    color: #eee;
+  }
+
+  .profile-name {
+    color: #eee;
+  }
+}
