@@ -1,3 +1,11 @@
+// Audio autoplay fix for Vercel/browser restrictions
+document.addEventListener("click", function () {
+  const audio = document.getElementById("bg-music");
+  if (audio) {
+    audio.play().catch(() => {});
+  }
+}, { once: true });
+
 // trigger to play music in the background with sweetalert
 window.addEventListener("load", () => {
   Swal.fire({
@@ -67,7 +75,7 @@ function setupNoButton() {
 function goToCeremony() {
   localStorage.setItem('cameFromIntro', 'true');
   confettiEffect();
-  window.location.href = 'ceremony/index.html';
+  window.location.href = '/ceremony/';
 }
 
 // Yes button - navigate to ceremony with celebration
