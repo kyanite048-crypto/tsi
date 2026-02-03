@@ -17,12 +17,11 @@ window.addEventListener("load", () => {
     confirmButtonText: "Yes",
     cancelButtonText: "No",
   }).then((result) => {
-    if (result.isConfirmed) {
-      document.querySelector(".song").play();
-      animationTimeline();
-    } else {
-      animationTimeline();
+    const audio = document.getElementById("bg-music");
+    if (audio) {
+      audio.play().catch(() => {});
     }
+    animationTimeline();
   });
 });
 
@@ -133,6 +132,8 @@ function showFinalPage() {
 
 // animation timeline
 const animationTimeline = () => {
+  window.animationStarted = true;
+  
   // Get viewport dimensions for responsive animations
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
@@ -408,3 +409,10 @@ const animationTimeline = () => {
       zIndex: "-1",
     }, "-=0.5");
 };
+
+// Safety fallback: start animation if it hasn't started after 2 seconds
+setTimeout(() => {
+  if (typeof window.animationStarted === "undefined") {
+    animationTimeline();
+  }
+}, 2000);
