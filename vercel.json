@@ -1,6 +1,6 @@
 {
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/ceremony", "dest": "/ceremony/index.html" }
+  "rewrites": [
+    { "source": "/ceremony", "destination": "/ceremony/index.html" },
+    { "source": "/ceremony/", "destination": "/ceremony/index.html" }
   ]
 }

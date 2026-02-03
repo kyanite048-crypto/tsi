@@ -75,7 +75,7 @@ function setupNoButton() {
 function goToCeremony() {
   localStorage.setItem('cameFromIntro', 'true');
   confettiEffect();
-  window.location.href = '/ceremony/';
+  window.location.href = '/ceremony';
 }
 
 // Yes button - navigate to ceremony with celebration
